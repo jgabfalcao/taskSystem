@@ -7,7 +7,6 @@ module.exports.getTasks = async (req, res) =>{
 
 module.exports.saveTask =  (req, res) =>{
   const {task} = req.body
-
   TaskModel.create({task})
   .then((data) =>{
     console.log("Saved Successfully...");
